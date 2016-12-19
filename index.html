@@ -3,14 +3,21 @@
 
 <head>
     <title>
-        Polymer exploration
+        Polymer demo
     </title>
     <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
     <!-- 2. Use an HTML Import to bring in some elements. -->
+    <link rel='import' href='bower_components/syntax-highlight/syntax-highlight.html'>
+
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html"></link>
+    <link rel="import" href="bower_components/gold-cc-input/gold-cc-input.html"></link>
     <link rel="import" href="bower_components/gold-cc-cvc-input/gold-cc-cvc-input.html"></link>
+    <link rel="import" href="bower_components/gold-email-input/gold-email-input.html"></link>
+    <link rel="import" href="bower_components/gold-phone-input/gold-phone-input.html"></link>
+
+
 
     <!-- main document - include the module you need in a custom-style element -->
     <style is="custom-style" include="iron-flex"></style>
@@ -18,44 +25,32 @@
 </head>
 
 <body>
-    <div>
-        <h1>Useful polymer components</h1>
-    </div>
-    <div class="layout vertical">
-        <div>
-            <h2>Iron Flex Layout</h2>
-            <a href="https://github.com/PolymerElements/iron-flex-layout">Link</a>
-        </div>
-        <div>Two</div>
-        <div>Three</div>
-    </div>
-    <form is="iron-form" id="form" method="post" action="/form/handler">
-        <paper-input name="name" label="name"></paper-input>
-        <input name="address">
-        <gold-cc-cvc-input></gold-cc-cvc-input>
+  <div class="vertical-section-container centered">
+    <div class="vertical-section">
+      <h3>Gold elements</h3>
+      <gold-cc-cvc-input></gold-cc-cvc-input>
+      <syntax-highlight>
+          <gold-cc-cvc-input></gold-cc-cvc-input>
+      </syntax-highlight>
+
+      <gold-cc-cvc-input card-type="amex"></gold-cc-cvc-input>
+      <syntax-highlight>
         <gold-cc-cvc-input card-type="amex"></gold-cc-cvc-input>
-    </form>
+      </syntax-highlight>
 
+      <gold-email-input label="your email address" auto-validate></gold-email-input>
+      <syntax-highlight>
+        <gold-email-input label="your email address" auto-validate></gold-email-input>
+      </syntax-highlight>
 
-
-    <div class="vertical-section-container centered">
-    <h4>Standard</h4>
-    <div class="vertical-section">
-        <gold-cc-cvc-input class="small"></gold-cc-cvc-input>
-        <gold-cc-cvc-input class="small" label="AMEX" card-type="amex"></gold-cc-cvc-input>
-        <gold-cc-cvc-input auto-validate required label="Auto"></gold-cc-cvc-input>
+      <gold-phone-input country-code="971" phone-number-pattern="XX-XXX-XXXX"></gold-phone-input>
+      <syntax-highlight>
+        <gold-phone-input country-code="971" phone-number-pattern="XX-XXX-XXXX"></gold-phone-input>
+      </syntax-highlight>
     </div>
 
-    <h4>Pre-validated</h4>
     <div class="vertical-section">
-      <gold-cc-cvc-input required auto-validate value="123"></gold-cc-cvc-input>
-      <gold-cc-cvc-input required auto-validate card-type="amex" value="1234"></gold-cc-cvc-input>
-      <gold-cc-cvc-input required auto-validate value="12"></gold-cc-cvc-input>
-    </div>
-
-    <h4>Custom error message, auto-validates on blur</h4>
-    <div class="vertical-section">
-      <gold-cc-cvc-input required auto-validate error-message="Please enter a valid CVC"></gold-cc-cvc-input>
+      <h3>Gold elements</h3>
     </div>
   </div>
 
