@@ -7,10 +7,13 @@
     "gold-email-input": "^1.0.9",
     "gold-phone-input": "PolymerElements/gold-phone-input#^1.1.0",
     "gold-zip-input": "^1.0.6",
-    "iron-flex-layout": "^1.3.1",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.3.1",
     "iron-form": "^1.1.4",
     "iron-validatable-behavior": "^1.1.1",
     "prism-element": "PolymerElements/prism-element#^1.2.0",
-    "syntax-highlight": "1000ch/syntax-highlight#^1.0.0"
+    "syntax-highlight": "1000ch/syntax-highlight#^1.0.0",
+    "google-map": "GoogleWebComponents/google-map#^1.1.14",
+    "iron-collapse": "PolymerElements/iron-collapse#^1.3.0",
+    "iron-autogrow-textarea": "PolymerElements/iron-autogrow-textarea#^1.0.14"
   }
 }

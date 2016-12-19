@@ -3,21 +3,27 @@
 
 <head>
     <title>
-        Polymer demo
+        Polymer exploration
     </title>
     <!-- 1. Load webcomponents-lite.min.js for polyfill support. -->
     <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
     <!-- 2. Use an HTML Import to bring in some elements. -->
+
+    <!-- syntax highlighting -->
     <link rel='import' href='bower_components/syntax-highlight/syntax-highlight.html'>
 
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout-classes.html"></link>
+
+    <!-- gold elements -->
     <link rel="import" href="bower_components/gold-cc-input/gold-cc-input.html"></link>
     <link rel="import" href="bower_components/gold-cc-cvc-input/gold-cc-cvc-input.html"></link>
     <link rel="import" href="bower_components/gold-email-input/gold-email-input.html"></link>
     <link rel="import" href="bower_components/gold-phone-input/gold-phone-input.html"></link>
 
-
+    <!-- iron elements -->
+    <link rel="import" href="bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html"></link>
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html"></link>
 
     <!-- main document - include the module you need in a custom-style element -->
     <style is="custom-style" include="iron-flex"></style>
@@ -26,22 +32,30 @@
 
 <body>
   <div class="vertical-section-container centered">
+
     <div class="vertical-section">
       <h3>Gold elements</h3>
+
       <gold-cc-cvc-input></gold-cc-cvc-input>
       <syntax-highlight>
           <gold-cc-cvc-input></gold-cc-cvc-input>
       </syntax-highlight>
+
+      <br />
 
       <gold-cc-cvc-input card-type="amex"></gold-cc-cvc-input>
       <syntax-highlight>
         <gold-cc-cvc-input card-type="amex"></gold-cc-cvc-input>
       </syntax-highlight>
 
+      <br />
+
       <gold-email-input label="your email address" auto-validate></gold-email-input>
       <syntax-highlight>
         <gold-email-input label="your email address" auto-validate></gold-email-input>
       </syntax-highlight>
+
+      <br />
 
       <gold-phone-input country-code="971" phone-number-pattern="XX-XXX-XXXX"></gold-phone-input>
       <syntax-highlight>
@@ -49,9 +63,60 @@
       </syntax-highlight>
     </div>
 
+    <br />
+
     <div class="vertical-section">
-      <h3>Gold elements</h3>
+      <h3>Iron elements</h3>
+
+      <iron-autogrow-textarea></iron-autogrow-textarea>
+      <syntax-highlight>
+        <iron-autogrow-textarea></iron-autogrow-textarea>
+      </syntax-highlight>
+
+      <br />
+
+      <style is="custom-style">
+        .flex-horizontal {
+          @apply(--layout-horizontal);
+          background: #333333;
+          padding: 30px;
+          color: #ffffff;
+        }
+        .flexchild {
+          @apply(--layout-flex);
+        }
+      </style>
+
+      <div class="container flex-horizontal">
+        <div>one</div>
+        <div class="flexchild">two (flex)</div>
+        <div>three</div>
+      </div>
+      <syntax-highlight>
+        <style is="custom-style">
+          .flex-horizontal {
+            @apply(--layout-horizontal);
+            background: #333333;
+            padding: 30px;
+            color: #ffffff;
+          }
+          .flexchild {
+            @apply(--layout-flex);
+          }
+        </style>
+
+        <div class="container flex-horizontal">
+          <div>one</div>
+          <div class="flexchild">two (flex)</div>
+          <div>three</div>
+        </div>
+      </syntax-highlight>
+
+      <br />
+
+
     </div>
+
   </div>
 
 
