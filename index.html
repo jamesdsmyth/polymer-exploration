@@ -24,9 +24,8 @@
     <!-- iron elements -->
     <link rel="import" href="bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html"></link>
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html"></link>
+    <link rel="import" href="bower_components/iron-image/iron-image.html"></link>
 
-    <!-- main document - include the module you need in a custom-style element -->
-    <style is="custom-style" include="iron-flex"></style>
 
 </head>
 
@@ -68,13 +67,6 @@
     <div class="vertical-section">
       <h3>Iron elements</h3>
 
-      <iron-autogrow-textarea></iron-autogrow-textarea>
-      <syntax-highlight>
-        <iron-autogrow-textarea></iron-autogrow-textarea>
-      </syntax-highlight>
-
-      <br />
-
       <style is="custom-style">
         .flex-horizontal {
           @apply(--layout-horizontal);
@@ -114,12 +106,36 @@
 
       <br />
 
+      <iron-autogrow-textarea></iron-autogrow-textarea>
+      <syntax-highlight>
+        <iron-autogrow-textarea></iron-autogrow-textarea>
+      </syntax-highlight>
+
+      <br />
+
+      <iron-image style="width:400px; height:400px;" sizing="contain"
+        src="http://lorempixel.com/600/400"></iron-image>
+      <syntax-highlight>
+        <iron-image style="width:400px; height:400px;" sizing="contain"
+          src="http://lorempixel.com/600/400"></iron-image>
+      </syntax-highlight>
+
+      <iron-image style="width:400px; height:400px;" sizing="cover"
+        src="http://lorempixel.com/600/400"></iron-image>
+      <syntax-highlight>
+        <iron-image style="width:400px; height:400px;" sizing="cover"
+        src="http://lorempixel.com/600/400"></iron-image>
+      </syntax-highlight>
+
+      <iron-image style="width:400px; height:400px; background-color: lightgray;"
+        sizing="cover" preload fade src="http://lorempixel.com/600/400"></iron-image>
+      <syntax-highlight>
+        <iron-image style="width:400px; height:400px; background-color: lightgray;"
+        sizing="cover" preload fade src="http://lorempixel.com/600/400"></iron-image>
+      </syntax-highlight>
 
     </div>
-
   </div>
-
-
 </body>
 
 </html>
