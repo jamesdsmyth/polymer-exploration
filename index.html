@@ -25,6 +25,9 @@
     <link rel="import" href="bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html"></link>
     <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html"></link>
     <link rel="import" href="bower_components/iron-image/iron-image.html"></link>
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox"></link>
+    <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button"></link>
+    <link rel="import" href="bower_components/paper-slider/paper-slider"></link>
 
 
 </head>
@@ -134,7 +137,48 @@
         sizing="cover" preload fade src="http://lorempixel.com/600/400"></iron-image>
       </syntax-highlight>
 
+      <br />
+
     </div>
+
+    <div class="vertical-section">
+      <h3>Paper input elements</h3>
+
+        <paper-checkbox checked>Checked</paper-checkbox>
+        <paper-checkbox class="styled">
+          Checkbox
+        <span class="subtitle">
+          With a longer label
+        </span>
+        </paper-checkbox>
+        <paper-checkbox disabled>Disabled</paper-checkbox>
+        <syntax-highlight>
+          <paper-checkbox checked>Checked</paper-checkbox>
+          <paper-checkbox class="styled">
+            Checkbox
+          <span class="subtitle">
+            With a longer label
+          </span>
+          </paper-checkbox>
+          <paper-checkbox disabled>Disabled</paper-checkbox>
+        </syntax-highlight>
+
+        <br/>
+
+        <paper-toggle-button checked></paper-toggle-button>
+        <paper-toggle-button disabled></paper-toggle-button>
+        <syntax-highlight>
+          <paper-toggle-button checked></paper-toggle-button>
+          <paper-toggle-button disabled></paper-toggle-button>
+        </syntax-highlight>
+
+        <br/>
+
+        <paper-slider value="33"></paper-slider>
+        <syntax-highlight>
+          <paper-slider value="33"></paper-slider>
+        </syntax-highlight>
+
   </div>
 </body>
 
